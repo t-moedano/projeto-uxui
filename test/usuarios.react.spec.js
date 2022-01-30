@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ListaDeUsuarios from '../src/ListaDeUsuarios';
 
-test('Link changes the class when hovered', () => {
+test('Snapshot test for content', () => {
   const component = renderer.create(
     <ListaDeUsuarios />
   );
@@ -10,3 +10,4 @@ test('Link changes the class when hovered', () => {
   expect(tree).toMatchSnapshot();
 
 });
+

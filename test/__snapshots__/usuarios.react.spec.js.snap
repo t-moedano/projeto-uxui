@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`2 1`] = `
+Array [
+  <div
+    class="overlay"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="abrirModal"
+    >
+      <p
+        className="texto-cabecalho-modal"
+      >
+        Pagamento para 
+        <span>
+          
+        </span>
+      </p>
+      <div
+        class="gridchoice"
+      >
+        <div>
+          Digite o valor:
+        </div>
+        <div
+          className="valorInput"
+        >
+          <input
+            inputMode="numeric"
+            inputmode="numeric"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseUp={[Function]}
+            placeholder="R$ 0,00"
+            type="text"
+            value=""
+          />
+          <p
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Campo obrigatório
+          </p>
+        </div>
+        <div>
+          Escolha um cartão:
+        </div>
+        <select
+          class="cardselector"
+          onChange={[Function]}
+          value="1"
+        >
+          <option
+            value="1"
+          >
+            Cartão com final 
+            1111
+          </option>
+          <option
+            value="2"
+          >
+            Cartão com final 
+            1234
+          </option>
+        </select>
+      </div>
+      <div
+        class="gridbutton"
+      >
+        <div
+          class="decentbutton cancel"
+          onClick={[Function]}
+        >
+          Cancelar
+        </div>
+        <div
+          class="decentbutton success"
+          onClick={[Function]}
+        >
+          Pagar
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="abrirModal"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <p
+      className="texto-cabecalho-modal"
+    >
+      Recibo de pagamento
+    </p>
+    <p>
+      O Pagamento 
+      <b>
+        
+      </b>
+       foi concluído com sucesso
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Fechar
+    </button>
+  </div>,
+]
+`;
+
+exports[`Snapshot test for content 1`] = `
+Array [
+  <div
+    class="overlay"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="abrirModal"
+    >
+      <p
+        className="texto-cabecalho-modal"
+      >
+        Pagamento para 
+        <span>
+          
+        </span>
+      </p>
+      <div
+        class="gridchoice"
+      >
+        <div>
+          Digite o valor:
+        </div>
+        <div
+          className="valorInput"
+        >
+          <input
+            inputMode="numeric"
+            inputmode="numeric"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseUp={[Function]}
+            placeholder="R$ 0,00"
+            type="text"
+            value=""
+          />
+          <p
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Campo obrigatório
+          </p>
+        </div>
+        <div>
+          Escolha um cartão:
+        </div>
+        <select
+          class="cardselector"
+          onChange={[Function]}
+          value="1"
+        >
+          <option
+            value="1"
+          >
+            Cartão com final 
+            1111
+          </option>
+          <option
+            value="2"
+          >
+            Cartão com final 
+            1234
+          </option>
+        </select>
+      </div>
+      <div
+        class="gridbutton"
+      >
+        <div
+          class="decentbutton cancel"
+          onClick={[Function]}
+        >
+          Cancelar
+        </div>
+        <div
+          class="decentbutton success"
+          onClick={[Function]}
+        >
+          Pagar
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="abrirModal"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <p
+      className="texto-cabecalho-modal"
+    >
+      Recibo de pagamento
+    </p>
+    <p>
+      O Pagamento 
+      <b>
+        
+      </b>
+       foi concluído com sucesso
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Fechar
+    </button>
+  </div>,
+]
+`;
