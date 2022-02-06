@@ -15,12 +15,13 @@
     "react-dom": "^17.0.2",
     "react-number-format": "^4.8.0",
     "react-scripts": "^3.4.4",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@babel/preset-env": "^7.12.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -30,6 +31,11 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest":{
+        "moduleNameMapper":{
+            "\\.(css|less|scss|sass)$": "identity-obj-proxy" 
+        }
   },
   "browserslist": {
     "production": [
@@ -44,6 +50,8 @@
     ]
   },
   "devDependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "jest-transform-stub": "^2.0.0",
     "react-test-renderer": "^17.0.2"
   }
 }
