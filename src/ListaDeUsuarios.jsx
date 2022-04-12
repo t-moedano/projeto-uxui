@@ -86,42 +86,44 @@ const valorInput = (event) => {
     return (
         <>
             {infos.map(item => (
-                <div class="clientcardcontainer" key={item.index}>
-                    <div class="clientcard" onClick={()=>{abrirModalPagar(item.name)}}>
-                        <img class="image" src={item.img} alt="Foto do usuário" />
-                        <div class="client-info">
-                            <div class="info">Nome do Usuário: {item.name}</div>
-                            <div class="info">ID: {item.id} - Username: {item.username}</div>
+                <div className="clientcardcontainer" key={item.index}>
+                    <div className="clientcard" onClick={()=>{abrirModalPagar(item.name)}}>
+                        <img className="image" src={item.img} alt="Foto do usuário" />
+                        <div className="client-info">
+                            <div className="info">Nome do Usuário: {item.name}</div>
+                            <div className="info">ID: {item.id} - Username: {item.username}</div>
                         </div>
-                        <div class="hover">
-                            Clique no card para realizar o pagamento
+                        <div className="hover">
+                        </div>
+                        <div className="pay-button">
+                            <a className="pay-text">PAGAR</a>
                         </div>
                     </div>
                 </div>
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
-            <div class="overlay" style={{display: abrirPagamento}}>       
+            <div className="overlay" style={{display: abrirPagamento}}>       
                 <div className="abrirModal">
                     <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
-                    <div class="gridchoice">
+                    <div className="gridchoice">
                         <div>Digite o valor:</div>
                         <div className="valorInput">
-                            <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
+                            <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputMode="numeric" placeholder="R$ 0,00"/>
                             <p style={{display:validarCampo}}>Campo obrigatório</p>
                         </div>
                         <div>
                             Escolha um cartão:
                         </div>
-                        <select class="cardselector" value={valorCartao} onChange={escolhaDoCartao}>
+                        <select className="cardselector" value={valorCartao} onChange={escolhaDoCartao}>
                             <option value="1">Cartão com final {cards[0].card_number.substr(-4)}</option>
                             <option value="2">Cartão com final {cards[1].card_number.substr(-4)}</option>
                         </select>
                     </div>
 
-                    <div class="gridbutton">
-                        <div class="decentbutton cancel" onClick={()=>{fecharModalPagamento()}}>Cancelar</div>
-                        <div class="decentbutton success" onClick={()=>{abrirModalPagou ()}}>Pagar</div>
+                    <div className="gridbutton">
+                        <div className="pay-button pay-text cancel" onClick={()=>{fecharModalPagamento()}}>CANCELAR</div>
+                        <div className="pay-button pay-text success" onClick={()=>{abrirModalPagou ()}}>PAGAR</div>
                     </div>
                 </div>  
             </div>
@@ -129,7 +131,7 @@ const valorInput = (event) => {
             <div className="abrirModal" style={{display: abrirPagou}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
-                <button onClick={()=>{fecharModal()}}>Fechar</button>
+                <a className="pay-button pay-text" onClick={()=>{fecharModal()}}>Fechar</a>
             </div>
         </>
     )
