@@ -85,22 +85,24 @@ const valorInput = (event) => {
 // Renderizando na tela as informações recebidas da API 
     return (
         <>
-            {infos.map(item => (
-                <div className="clientcardcontainer" key={item.index}>
-                    <div className="clientcard" onClick={()=>{abrirModalPagar(item.name)}}>
-                        <img className="image" src={item.img} alt="Foto do usuário" />
-                        <div className="client-info">
-                            <div className="info">Nome do Usuário: {item.name}</div>
-                            <div className="info">ID: {item.id} - Username: {item.username}</div>
-                        </div>
-                        <div className="hover">
-                        </div>
-                        <div className="pay-button">
-                            <a className="pay-text">PAGAR</a>
+            <div className="clientGrid">
+                {infos.map(item => (
+                    <div className="clientcardcontainer" key={item.index}>
+                        <div className="clientcard" onClick={()=>{abrirModalPagar(item.name)}}>
+                            <img className="image" src={item.img} alt="Foto do usuário" />
+                            <div className="client-info">
+                                <div className="info">Nome do Usuário: {item.name}</div>
+                                <div className="info">ID: {item.id} - Username: {item.username}</div>
+                            </div>
+                            <div className="hover">
+                            </div>
+                            <div className="pay-button">
+                                <a className="pay-text">PAGAR</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
             <div className="overlay" style={{display: abrirPagamento}}>       

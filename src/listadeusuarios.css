@@ -183,7 +183,9 @@ button {
 
 .info {
   align-self: center;
-  /* font-weight: bold; */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .hover {
@@ -229,7 +231,17 @@ button {
   background: rgb(202, 60, 60);
 }
 
+.clientGrid {
+  display: grid;
+}
+
 /* Media Queries */
+
+@media only screen and (min-width: 1081px) {
+  .clientGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media only screen and (max-width: 1080px) {
   .clientcard {
